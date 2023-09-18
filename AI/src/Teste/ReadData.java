@@ -22,35 +22,38 @@ public class ReadData {
             System.out.println("Porta serial aberta com sucesso.");
             comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 1000, 0);
             BufferedReader in = new BufferedReader(new InputStreamReader(comPort.getInputStream()));
-            while(true) {
+            System.out.println("Porta serial aberta com sucesso. 111");
+            while (true){
+                String msg = null;
                 try {
-                    String msg = in.readLine();
-                    System.out.println(msg);
-
-                    if(msg.length() >= 64){
-                        int idx = 0;
-                        for (int i = 0; i < board.length; i++) {
-                            for (int j = 0; j < board[i].length; j++) {
-                                board[i][j] = msg.charAt(idx);
-                                idx++;
-                            }
-                        }
-                    }
-
-                    System.out.println("\n----------------");
-                    for (int i = 0; i < board.length; i++) {
-                        for (int j = 0; j < board[i].length; j++) {
-                            System.out.print(board[i][j]);
-                        }
-                        System.out.println();
-                    }
-                    System.out.println("\n----------------");
-
+                    while((msg = in.readLine()) != null);
+                    System.out.println("Porta serial aberta com sucesso. 2222");
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+                System.out.println(msg);
+
+                if(msg.length() >= 64){
+                    int idx = 0;
+                    for (int i = 0; i < board.length; i++) {
+                        for (int j = 0; j < board[i].length; j++) {
+                            board[i][j] = msg.charAt(idx);
+                            idx++;
+                        }
+                    }
+                }
+
+                System.out.println("\n----------------");
+                for (int i = 0; i < board.length; i++) {
+                    for (int j = 0; j < board[i].length; j++) {
+                        System.out.print(board[i][j]);
+                    }
+                    System.out.println();
+                }
+                System.out.println("\n----------------");
             }
             //comPort.closePort();
+            //System.out.println("v");
             // Crie uma matriz 8x8 para armazenar os dados
 
 
