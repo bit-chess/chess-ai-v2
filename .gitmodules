@@ -1,0 +1,3 @@
+[submodule "board_input"]
+	path = AI/src
+	url = git@github.com:bit-chess/board_input.git
