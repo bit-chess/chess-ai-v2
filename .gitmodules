@@ -1,3 +1,6 @@
 [submodule "AI/src/Communication"]
 	path = AI/src/Communication
 	url = https://github.com/bit-chess/Communication
+[submodule "AI/src/Analyzer"]
+	path = AI/src/Analyzer
+	url = https://github.com/bit-chess/Analyzer
