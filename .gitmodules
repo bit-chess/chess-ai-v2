@@ -1,3 +1,3 @@
-[submodule "AI/src"]
-	path = AI/src
-	url = git@github.com:bit-chess/board_input.git
+[submodule "AI/src/Communication"]
+	path = AI/src/Communication
+	url = https://github.com/bit-chess/Communication
