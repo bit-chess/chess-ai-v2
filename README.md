@@ -10,14 +10,6 @@ Projeto para a disciplina Física e suas Tecnologias do 2º ano do ensino médio
 
 - Pacote referente aos códigos da I.A(Inteligência Artificial).
 
-## [Programming_Board](https://github.com/lightTuring/chess-ai/tree/master/Programming_Board)
-
-- Pacote referente aos códigos do sistema robótico, contêm como por exemplo, comunicação Socket, leitura do estado dos pinos(casas) do tabuleiro e o sistema de garra.
-
-## [Depreciated](https://github.com/lightTuring/chess-ai/tree/master/Depreciated)
-
-- Arquivos depreciados, porém podem servir de ideias para futuras implementações ou para outros desenvolvedores.
-
 ## REGRAS
 
 1. O usuário assume o controle das Brancas e o robô assume o controle das Pretas.
